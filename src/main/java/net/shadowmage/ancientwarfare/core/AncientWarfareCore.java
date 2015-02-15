@@ -30,6 +30,7 @@ import net.shadowmage.ancientwarfare.core.proxy.CommonProxyBase;
 import net.shadowmage.ancientwarfare.core.research.ResearchData;
 import net.shadowmage.ancientwarfare.core.research.ResearchGoal;
 import net.shadowmage.ancientwarfare.core.research.ResearchTracker;
+import net.shadowmage.ancientwarfare.core.research.ResearchUnlockables;
 
 @Mod
         (
@@ -113,6 +114,7 @@ public class AncientWarfareCore {
          * register recipes
          */
         AWCoreCrafting.loadRecipes();
+        ResearchUnlockables.loadRecipes();
         if(config.hasChanged())
             config.save();
         AWLog.log("Ancient Warfare Core Init Completed");
